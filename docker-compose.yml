@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  testops:
+    image: testops:0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PORT: ${PORT}
+      IP_ADDR: ${IP_ADDR}
+    ports:
+    - ${PORT}:${PORT}
